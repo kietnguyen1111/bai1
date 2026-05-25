@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20252 IT1110 THDC Quiz 01 Khái niệm cơ bản về máy tính</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #e0f2f1;
+            padding: 20px; 
+            color: #333;
+        }
+        .quiz-container { 
+            background-color: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            max-width: 800px; 
+            margin: auto; 
+        }
+        h2 { 
+            color: #0078d4;
+            border-bottom: 2px solid #f3f2f1;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .question-block { 
+            background-color: #faf9f8;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px; 
+            border: 1px solid #edebe9;
+        }
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .options label { 
+            display: block; 
+            margin-bottom: 12px; 
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .options label:hover {
+            background-color: #f3f2f1;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        button { 
+            background-color: #0078d4; 
+            color: white; 
+            padding: 12px 24px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            font-weight: bold;
+            display: block;
+            margin: 20px auto 0;
+            transition: background-color 0.2s;
+        }
+        button:hover { 
+            background-color: #005a9e; 
+        }
+        #result-container { 
+            margin-top: 25px; 
+            text-align: center;
+            font-size: 20px; 
+        }
+        .feedback { 
+            font-weight: bold; 
+            display: none; 
+            margin-top: 15px; 
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .correct-feedback { 
+            background-color: #dff6dd;
+            color: #107c10;
+        }
+        .wrong-feedback { 
+            background-color: #fde7e9;
+            color: #a80000;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #008080;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>20252 IT1110 THDC Quiz 01 Khái niệm cơ bản về máy tính</h2>
+        <div id="quiz-form">
+            
+            <div class="question-block">
+                <div class="question-title">1. Khẳng định nào về bộ CPU máy tính/điện thoại hiện đại sau là đúng</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q1" value="A"> Các CPU hiện tại được chế tạo dựa trên chất bán dẫn silic - oxit silic (nguyên liệu chính từ cát)</label>
+                    <label><input type="checkbox" name="q1" value="B"> Đơn vị nhỏ nhất để cấu tạo nên CPU là transitor</label>
+                    <label><input type="checkbox" name="q1" value="C"> Một CPU hiện đại thường có nhiều nhân - core</label>
+                    <label><input type="checkbox" name="q1" value="D"> CPU càng nhanh, hiện đại thì càng có nhiều chân tiếp xúc</label>
+                    <label><input type="checkbox" name="q1" value="E"> Các nhân trong CPU điện thoại có tốc độ làm việc bằng nhau</label>
+                    <label><input type="checkbox" name="q1" value="F"> Tốc độ của CPU được đánh giá thông qua thời gian 1 xung hoặc tần số - số lượng xung nhịp trong 1 giây. Xung nhịp càng cao tốc độ càng nhanh</label>
+                    <label><input type="checkbox" name="q1" value="G"> Mật độ transitor trên CPU càng cao thì tốc độ càng nhanh</label>
+                </div>
+                <div class="feedback" id="feedback-q1"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">2. Đâu là những công việc mà sẽ bị ảnh hưởng trực tiếp bởi sự phát triển của trợ lý ảo AI (như ChatGPT, Siri, Google Assistant...)</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q2" value="A"> Lập trình viên</label>
+                    <label><input type="checkbox" name="q2" value="B"> Tổng đài viên & Chăm sóc khách hàng</label>
+                    <label><input type="checkbox" name="q2" value="C"> Nhân viên nhập liệu & Hành chính văn phòng</label>
+                    <label><input type="checkbox" name="q2" value="D"> Biên dịch viên & Phiên dịch viên</label>
+                    <label><input type="checkbox" name="q2" value="E"> Nhân viên bán hàng & Telesales</label>
+                    <label><input type="checkbox" name="q2" value="F"> Biên tập viên, nhà báo & Người viết nội dung</label>
+                    <label><input type="checkbox" name="q2" value="G"> Giáo viên & Gia sư online</label>
+                    <label><input type="checkbox" name="q2" value="H"> Thiết kế đồ họa & Sáng tạo nội dung số</label>
+                </div>
+                <div class="feedback" id="feedback-q2"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">3. Những phát biểu nào về hệ cơ số đếm dùng trong máy tính là đúng</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q3" value="A"> Máy tính có thể dùng hệ 2, 8 và 16</label>
+                    <label><input type="checkbox" name="q3" value="B"> Máy tính có thể dùng số hệ 10 như con người</label>
+                    <label><input type="checkbox" name="q3" value="C"> Hệ 8 và 16 chỉ được dùng để biểu diễn lại các nhóm số nhị phân cho dễ đọc</label>
+                    <label><input type="checkbox" name="q3" value="D"> Máy tính chỉ làm việc với bit 0 và 1</label>
+                    <label><input type="checkbox" name="q3" value="E"> Máy tính có thể dùng hệ cơ số đếm bất kỳ</label>
+                </div>
+                <div class="feedback" id="feedback-q3"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">4. Khi chuyển đổi số nguyên hệ 10 sang hệ cơ số b ta phải làm những gì</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q4" value="A"> Phải chia liên tiếp phần nguyên cho b</label>
+                    <label><input type="checkbox" name="q4" value="B"> Phần dư chính là giá trị chữ số tiếp theo (trong thứ tự viết)</label>
+                    <label><input type="checkbox" name="q4" value="C"> Kết quả cần viết theo thứ tự xuôi</label>
+                    <label><input type="checkbox" name="q4" value="D"> Kết quả cần viết ngược so với thứ tự khi chia</label>
+                    <label><input type="checkbox" name="q4" value="E"> Nếu hệ có số lớn hơn 10 ta cần biểu diễn lại các chữ số bằng chữ cái nếu cần</label>
+                </div>
+                <div class="feedback" id="feedback-q4"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">5. Khẳng định nào sau về công nghệ chế tạo chip 7nm, 4nm, 2nm là đúng</div>
+                <div>
+                    <table>
+                        <tr><th>AnandTech</th><th>IBM</th><th>TSMC</th><th>Intel</th><th>Samsung</th></tr>
+                        <tr><td>22nm</td><td></td><td></td><td>16.50</td><td></td></tr>
+                        <tr><td>16nm/14nm</td><td></td><td>28.88</td><td>44.67</td><td>33.32</td></tr>
+                        <tr><td>10nm</td><td></td><td>52.51</td><td>100.76</td><td>51.82</td></tr>
+                        <tr><td>7nm</td><td></td><td>91.20</td><td>237.18*</td><td>95.08</td></tr>
+                        <tr><td>5nm</td><td></td><td>171.30</td><td></td><td></td></tr>
+                        <tr><td>3nm</td><td></td><td>292.21*</td><td></td><td></td></tr>
+                        <tr><td>2nm</td><td>333.33</td><td></td><td></td><td></td></tr>
+                    </table>
+                    <div style="font-size: 0.85em; color: #555; margin-bottom: 10px;">Data from Wikichip, Different Fabs may have different counting methodologies<br>* Estimated Logic Density</div>
+                </div>
+                <div class="options">
+                    <label><input type="checkbox" name="q5" value="A"> Đây là kích thước của 1 bóng bán dẫn (transitor)</label>
+                    <label><input type="checkbox" name="q5" value="B"> Đó là khoảng cách của 2 bóng bán dẫn</label>
+                    <label><input type="checkbox" name="q5" value="C"> Giá trị này càng nhỏ cho phép nhét được càng nhiều bóng bán dẫn trên 1 đơn vị diện tích --> chip mạnh hơn</label>
+                    <label><input type="checkbox" name="q5" value="D"> Công nghệ hiện tại cho phép xếp chồng các bóng bán dẫn lên nhau theo chiều dọc nên ý nghĩa của 2nm, 3nm không còn đúng khi đánh giá sức mạnh của chip</label>
+                </div>
+                <div class="feedback" id="feedback-q5"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">6. Giá trị của một số trong hệ cơ số b nghĩa là</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q6" value="A"> Ta đã chuyển số đó về hệ 10</label>
+                    <label><input type="checkbox" name="q6" value="B"> Là giá trị của các chữ số trong hệ cơ số b</label>
+                    <label><input type="checkbox" name="q6" value="C"> Là giá trị của số đó trong hệ cơ số nhị phân</label>
+                    <label><input type="checkbox" name="q6" value="D"> Không có lựa chọn nào ở trên là đúng</label>
+                </div>
+                <div class="feedback" id="feedback-q6"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">7. Đâu là những công việc mà sẽ bị ảnh hưởng trực tiếp bởi sự phát triển của trợ lý ảo AI (như ChatGPT, Siri, Google Assistant...)</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q7" value="A"> Lập trình viên</label>
+                    <label><input type="checkbox" name="q7" value="B"> Tổng đài viên & Chăm sóc khách hàng</label>
+                    <label><input type="checkbox" name="q7" value="C"> Nhân viên nhập liệu & Hành chính văn phòng</label>
+                    <label><input type="checkbox" name="q7" value="D"> Biên dịch viên & Phiên dịch viên</label>
+                    <label><input type="checkbox" name="q7" value="E"> Nhân viên bán hàng & Telesales</label>
+                    <label><input type="checkbox" name="q7" value="F"> Biên tập viên, nhà báo & Người viết nội dung</label>
+                    <label><input type="checkbox" name="q7" value="G"> Giáo viên & Gia sư online</label>
+                    <label><input type="checkbox" name="q7" value="H"> Thiết kế đồ họa & Sáng tạo nội dung số</label>
+                </div>
+                <div class="feedback" id="feedback-q7"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">8. Đâu là ví dụ về phần mềm có tích hợp AI - trí thông minh nhân tạo trong đời sống hàng ngày</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q8" value="A"> Phần mềm điều khiển bằng giọng nói</label>
+                    <label><input type="checkbox" name="q8" value="B"> Phần mềm điều khiển xe tự hành</label>
+                    <label><input type="checkbox" name="q8" value="C"> Phần mềm nghe nhạc như windows Media Player hoặc VLC</label>
+                    <label><input type="checkbox" name="q8" value="D"> Phần mềm kiểm tra chính tả tiếng Anh, Việt</label>
+                    <label><input type="checkbox" name="q8" value="E"> Phần mềm dịch tự động tài liệu của Google</label>
+                    <label><input type="checkbox" name="q8" value="F"> Phần mềm nhận diện khuôn mặt trong chấm công tự động</label>
+                </div>
+                <div class="feedback" id="feedback-q8"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">9. Bạn nên học những kỹ năng gì để thích nghi với trợ lý ảo AI</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q9" value="A"> Kỹ năng sáng tạo & tư duy đổi mới</label>
+                    <label><input type="checkbox" name="q9" value="B"> Kỹ năng phân tích dữ liệu & tư duy phản biện</label>
+                    <label><input type="checkbox" name="q9" value="C"> Kỹ năng giao tiếp, EQ</label>
+                    <label><input type="checkbox" name="q9" value="D"> Kỹ năng sử dụng và lập trình AI</label>
+                    <label><input type="checkbox" name="q9" value="E"> Kỹ năng làm việc với AI & tự động hóa</label>
+                </div>
+                <div class="feedback" id="feedback-q9"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">10. Đâu là những khẳng định đúng khi biểu diễn dữ liệu vào trong máy tính</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q10" value="A"> Dữ liệu trong cuộc sống hằng ngày phần lớn là liên tục, cần được số hóa khi chuyển vào biểu diễn trong máy tính</label>
+                    <label><input type="checkbox" name="q10" value="B"> Quá trình chuyển dữ liệu liên tục thành dữ liệu số là DAC</label>
+                    <label><input type="checkbox" name="q10" value="C"> Trong quá trình chuyển đổi dữ liệu liên tục về dạng số cần quan tâm đến tần số lấy mẫu</label>
+                    <label><input type="checkbox" name="q10" value="D"> Tần số lấy mẫu càng nhỏ càng tốt</label>
+                    <label><input type="checkbox" name="q10" value="E"> Biểu diễn dữ liệu bằng càng nhiều bit thì càng ít bị tốn bộ nhớ khi xử lý dữ liệu</label>
+                    <label><input type="checkbox" name="q10" value="F"> Số lượng bit biểu diễn dữ liệu khi lấy mẫu là một trong những yếu tố quan trọng quyết định tới dung lượng lưu trữ</label>
+                </div>
+                <div class="feedback" id="feedback-q10"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">11. Đâu là những công việc khó bị thay thế bởi trợ lý ảo AI (như ChatGPT, Siri, Google Assistant...)</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q11" value="A"> Giáo viên & Gia sư online</label>
+                    <label><input type="checkbox" name="q11" value="B"> Nghệ sĩ, nhà văn</label>
+                    <label><input type="checkbox" name="q11" value="C"> Bác sĩ tâm lý</label>
+                    <label><input type="checkbox" name="q11" value="D"> Luật sư</label>
+                    <label><input type="checkbox" name="q11" value="E"> Lãnh đạo (CEO, quản lý cấp cao)</label>
+                </div>
+                <div class="feedback" id="feedback-q11"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">12. Những hệ cơ số nào khác được sử dụng trong máy tính ngoài hệ nhị phân cho các mục đích khác nhau (hãy Google)</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q12" value="A"> Hệ 8 - Base 8</label>
+                    <label><input type="checkbox" name="q12" value="B"> Hệ 16 - Base 16</label>
+                    <label><input type="checkbox" name="q12" value="C"> Hệ 10 - Base 10</label>
+                    <label><input type="checkbox" name="q12" value="D"> Hệ 32 - Base 32</label>
+                    <label><input type="checkbox" name="q12" value="E"> Hệ 64 - Base 64</label>
+                    <label><input type="checkbox" name="q12" value="F"> Hệ 4 - Base 4</label>
+                </div>
+                <div class="feedback" id="feedback-q12"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">13. Tại sao máy tính sử dụng hệ nhị phân mà không dùng hệ cơ số khác?</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q13" value="A"> Phần cứng điện tử dễ thực hiện với hệ nhị phân</label>
+                    <label><input type="checkbox" name="q13" value="B"> Độ ổn định và chống nhiễu cao hơn</label>
+                    <label><input type="checkbox" name="q13" value="C"> Mạch logic đơn giản hơn, tiết kiệm chi phí</label>
+                    <label><input type="checkbox" name="q13" value="D"> Tốc độ xử lý nhanh hơn hệ 10 và hệ 8</label>
+                </div>
+                <div class="feedback" id="feedback-q13"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">14. Một số ví dụ về ứng dụng của chatbot AI trong thực tế</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q14" value="A"> Chăm sóc khách hàng (Customer Service)</label>
+                    <label><input type="checkbox" name="q14" value="B"> Thương mại điện tử & Bán hàng (E-commerce & Sales)</label>
+                    <label><input type="checkbox" name="q14" value="C"> Ngân hàng & Tài chính (Banking & FinTech)</label>
+                    <label><input type="checkbox" name="q14" value="D"> Giáo dục & E-learning</label>
+                    <label><input type="checkbox" name="q14" value="E"> Y tế & Chăm sóc sức khỏe (Healthcare)</label>
+                    <label><input type="checkbox" name="q14" value="F"> Lĩnh vực pháp lý & Tư vấn luật (Legal & Consulting)</label>
+                </div>
+                <div class="feedback" id="feedback-q14"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">15. Trong các chip chuyên dụng hoặc siêu máy tính có khái niệm TFLOP, vậy đơn vị này có ý nghĩa là gì</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q15" value="A"> Là số xung nhịp trong đơn vị thời gian (Tera = 1000 Tỉ, (10^12) xung nhịp)</label>
+                    <label><input type="checkbox" name="q15" value="B"> Là số lệnh có thể thực hiện trong đơn vị thời gian (Tera = 1000 Tỉ, (10^12) lệnh)</label>
+                    <label><input type="checkbox" name="q15" value="C"> Là số phép toán trên số nguyên có thể thực hiện trong đơn vị thời gian (Tera = 1000 Tỉ, (10^12) phép toán)</label>
+                    <label><input type="checkbox" name="q15" value="D"> Là số phép toán trên số thực dấu phẩy động có thể thực hiện trong đơn vị thời gian (Tera = 1000 Tỉ, (10^12) phép toán)</label>
+                </div>
+                <div class="feedback" id="feedback-q15"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">16. Đâu được coi là đặc điểm khác biệt của máy tính lượng tử so với máy tính thông thường (google)</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q16" value="A"> Máy tính lượng tử làm việc dựa trên nguyên lý cơ học lượng tử</label>
+                    <label><input type="checkbox" name="q16" value="B"> Có tốc độ xử lý vượt trội trong một số bài toán phức tạp</label>
+                    <label><input type="checkbox" name="q16" value="C"> Có khả năng chống nhiễu tốt</label>
+                    <label><input type="checkbox" name="q16" value="D"> Xử lý đồng thời khối lượng dữ liệu lớn</label>
+                    <label><input type="checkbox" name="q16" value="E"> Có khả năng xử lý song song (đa trạng thái)</label>
+                    <label><input type="checkbox" name="q16" value="F"> Chi phí chế tạo và vận hành rẻ tuy nhiên cồng kềnh về kích thước</label>
+                </div>
+                <div class="feedback" id="feedback-q16"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">17. Trong những hệ cơ số đếm thông dụng thì khẳng định nào sau là đúng</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q17" value="A"> Chỉ có hệ hexa dùng thêm các chữ cái</label>
+                    <label><input type="checkbox" name="q17" value="B"> Nếu cùng số lượng chữ số, giá trị trong hệ hexa sẽ là lớn nhất</label>
+                    <label><input type="checkbox" name="q17" value="C"> Hệ 8 và 16 không thể thực hiện các phép tính cộng và trừ</label>
+                    <label><input type="checkbox" name="q17" value="D"> Hệ số 8 chỉ có các chữ số từ 1,2 -->7</label>
+                    <label><input type="checkbox" name="q17" value="E"> Hệ cơ số 2 dùng ít chữ số nhất</label>
+                </div>
+                <div class="feedback" id="feedback-q17"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">18. Những khẳng định nào sau đây là đúng về máy tính</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q18" value="A"> Máy tính được điều khiển bởi các chương trình lập trình sẵn</label>
+                    <label><input type="checkbox" name="q18" value="B"> Hệ điều hành máy tính dùng để quản lý việc phân phối, sử dụng tài nguyên máy tính cho các chương trình cài đặt trên máy</label>
+                    <label><input type="checkbox" name="q18" value="C"> Chương trình chạy được trên máy tính phải được viết bằng mã nhị phân</label>
+                    <label><input type="checkbox" name="q18" value="D"> Máy tính có thể chạy chương trình trực tiếp nếu nó được viết bằng bằng ngôn ngữ lập trình như C/C++, COBOL, FORTRAN, Python, ...</label>
+                    <label><input type="checkbox" name="q18" value="E"> Trước khi có chuột và bàn phím thì chương trình và dữ liệu được đưa vào máy tính thông qua bìa đục lỗ</label>
+                </div>
+                <div class="feedback" id="feedback-q18"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">19. Đâu là các ưu điểm của dùng máy tính thay vì dùng mạch điện tử</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q19" value="A"> Máy tính có thể chạy nhiều phần mềm khác nhau mà không cần thay đổi phần cứng</label>
+                    <label><input type="checkbox" name="q19" value="B"> Khả năng xử lý mạnh mẽ</label>
+                    <label><input type="checkbox" name="q19" value="C"> Viết phần mềm cho máy tính thường đơn giản hơn so với việc lập trình firmware cho vi điều khiển hoặc thiết kế mạch số</label>
+                    <label><input type="checkbox" name="q19" value="D"> Các cổng I/O linh hoạt cho phép kết nối với nhiều thiết bị ngoại vi.</label>
+                </div>
+                <div class="feedback" id="feedback-q19"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">20. Đâu là những trường hợp mà nên dùng vi điều khiển/mạch điện tử thay vì dùng máy tính</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q20" value="A"> Ứng dụng yêu cầu tiêu thụ điện năng cực thấp (ví dụ: thiết bị IoT chạy pin)</label>
+                    <label><input type="checkbox" name="q20" value="B"> Hệ thống nhúng cần kích thước nhỏ gọn và chi phí thấp</label>
+                    <label><input type="checkbox" name="q20" value="C"> Ứng dụng yêu cầu thời gian phản hồi nhanh theo thời gian thực (ví dụ: hệ thống điều khiển động cơ).</label>
+                    <label><input type="checkbox" name="q20" value="D"> Ứng dụng cần có giao diện đồ họa và kết nối internet mạnh</label>
+                    <label><input type="checkbox" name="q20" value="E"> Ứng dụng có thể thực hiện nhiều công việc cùng lúc</label>
+                </div>
+                <div class="feedback" id="feedback-q20"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-title">21. Để có thể xử lý dữ liệu bằng máy tính, ta cần làm những công việc gì? Hãy chọn các lựa chọn phù hợp</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q21" value="A"> Nếu dữ liệu đầu vào là liên tục - analog thì cần rời rạc hóa (số hóa) dữ liệu</label>
+                    <label><input type="checkbox" name="q21" value="B"> Cần biểu diễn lại dữ liệu bằng số nhị phân</label>
+                    <label><input type="checkbox" name="q21" value="C"> Để xử lý mỗi loại dữ liệu, ta cần có chương trình phù hợp</label>
+                    <label><input type="checkbox" name="q21" value="D"> Một chương trình máy tính có thể xử lý mọi loại dữ liệu</label>
+                    <label><input type="checkbox" name="q21" value="E"> Dữ liệu trên máy tính chỉ là một biểu diễn gần đúng - xấp xỉ của dữ liệu trong thực tế</label>
+                    <label><input type="checkbox" name="q21" value="F"> Tần số lấy mẫu là số lượng mẫu được lấy trong 1 đơn vị thời gian, đây là tham số quan trọng quyết định đến chất lượng của việc biểu diễn dữ liệu trong máy tính</label>
+                </div>
+                <div class="feedback" id="feedback-q21"></div>
+            </div>
+            
+            <div class="question-block">
+                <div class="question-title">22. Những khẳng định nào về môn học IT1110 kỳ 20242 này sau đây là đúng</div>
+                <div class="options">
+                    <label><input type="checkbox" name="q22" value="A"> Tỉ lệ điểm lý thuyết, thực hành và cuối kỳ lần lượt là 25%-25%-50%</label>
+                    <label><input type="checkbox" name="q22" value="B"> Tỉ lệ điểm lý thuyết, thực hành và cuối kỳ lần lượt là 20%-20%-60%</label>
+                    <label><input type="checkbox" name="q22" value="C"> Điểm giữa kỳ lý thuyết được đánh giá thông qua bài thi trên lớp</label>
+                    <label><input type="checkbox" name="q22" value="D"> Điểm giữa kỳ lý thuyết được đánh giá thông qua điểm trung bình của các bài quiz trên team</label>
+                    <label><input type="checkbox" name="q22" value="E"> Có bài tập lập trình để cải thiện điểm cuối kỳ</label>
+                </div>
+                <div class="feedback" id="feedback-q22"></div>
+            </div>
+
+        </div>
+        <button onclick="gradeQuiz()">Nộp bài</button>
+        <div id="result-container"></div>
+    </div>
+
+    <script>
+        const answerKey = {
+            q1: ["A", "B", "C", "D", "F", "G"],
+            q2: ["A", "B", "C", "D", "E", "F", "G", "H"],
+            q3: ["C", "D"],
+            q4: ["A", "B", "D", "E"],
+            q5: ["B", "C", "D"],
+            q6: ["A"],
+            q7: ["A", "B", "C", "D", "E", "F", "G", "H"],
+            q8: ["A", "B", "D", "E", "F"],
+            q9: ["A", "B", "C", "D", "E"],
+            q10: ["A", "C", "F"],
+            q11: ["B", "C", "D", "E"],
+            q12: ["A", "B", "C", "D", "E"],
+            q13: ["A", "B", "C"],
+            q14: ["A", "B", "C", "D", "E", "F"],
+            q15: ["D"],
+            q16: ["A", "B", "D", "E"],
+            q17: ["A", "B", "E"],
+            q18: ["A", "B", "E"],
+            q19: ["A", "B", "C", "D"],
+            q20: ["A", "B", "C"],
+            q21: ["A", "B", "C", "E", "F"],
+            q22: ["A", "D"]
+        };
+
+        function gradeQuiz() {
+            let totalScore = 0;
+            const totalQuestions = Object.keys(answerKey).length;
+
+            for (let questionId in answerKey) {
+                const selected = Array.from(document.querySelectorAll(`input[name="${questionId}"]:checked`)).map(el => el.value);
+                const correct = answerKey[questionId];
+                const feedbackEl = document.getElementById(`feedback-${questionId}`);
+                
+                feedbackEl.style.display = "block";
+                feedbackEl.className = "feedback";
+
+                const isExactMatch = (selected.length === correct.length) && selected.every(val => correct.includes(val));
+
+                if (isExactMatch) {
+                    totalScore++;
+                    feedbackEl.innerHTML = "✓ Chính xác! (1/1 Points)";
+                    feedbackEl.classList.add("correct-feedback");
+                } else {
+                    feedbackEl.innerHTML = "✗ Sai. (Cần chọn chính xác và đầy đủ các đáp án đúng)";
+                    feedbackEl.classList.add("wrong-feedback");
+                }
+            }
+
+            const resultContainer = document.getElementById('result-container');
+            resultContainer.innerHTML = `<strong>Điểm của bạn: <span style="color: #0078d4;">${totalScore} / ${totalQuestions}</span></strong>`;
+        }
+    </script>
+</body>
+</html>
